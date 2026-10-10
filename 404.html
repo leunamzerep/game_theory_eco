@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Archivo no encontrado | Duopoly</title>
+    <link rel="stylesheet" href="/game_theory_eco/game.css">
+</head>
+
+<body>
+    <main class="component">
+        <h1>Archivo no encontrado</h1>
+        <h2>El archivo que intentaste abrir o descargar no está disponible:</h2>
+        <h3 id="requested-file"></h3>
+        <a class="next" href="/game_theory_eco/">Volver a Duopoly</a>
+    </main>
+    <script>
+        const requestedPath = window.location.pathname;
+        const requestedFile = requestedPath.substring(requestedPath.lastIndexOf("/") + 1) || "archivo desconocido";
+        document.getElementById("requested-file").textContent = requestedFile;
+    </script>
+</body>
+
+</html>
