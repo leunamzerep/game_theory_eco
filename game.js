@@ -11,6 +11,9 @@ $(document).ready(function () {
     var finalPrice;
 
     $(".next").on("click", function () {
+        if ($(this).closest("a").length) {
+            return;
+        }
         error = false;
         if (step === 4 || step === 9) {
 
